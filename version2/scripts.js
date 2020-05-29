@@ -6,13 +6,12 @@ $(".saveinput").on("click",function(){
 })
 
 function displaySchedule(){
-    $(".row").each(()=>{
+    $(".row").each(function(){
         var blockid = $(this).attr("id");
-        console.log(blockid)
         if( blockid !== "columnhead"){
-        var plan = localStorage.getItem(blockid) || "Enter your Plans here";
-        $(this).children(".userinput").val(plan);
-        console.log(blockid,plan)
+            var plan = localStorage.getItem(blockid) || "Enter your Plans here";
+            $(this).find(".userinput").val(plan);
+            console.log(blockid,plan)
         }
     })
     for(let i=9;i<18;i++){
