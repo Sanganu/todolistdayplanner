@@ -6,8 +6,8 @@ $("#saveplanner").on("click",function(event){
     var plannerdata=[]
     $(".planneractivity").each(function(){
         var timeentry ={
-            time:$(this).attr("id"),
-            dataentry:$(this).val()
+            time:$(this).attr("id").split("-")[1],
+            dataentry:$(this).val().trim()
         }
         plannerdata.push(timeentry);
     })
@@ -18,20 +18,23 @@ $("#saveplanner").on("click",function(event){
 
 function getPlannerdata(){
     var currenthour = moment().format("HH");
-    console.log(JSON.parse(localStorage.getItem("myplanner")));
-    for(let i=0;i<planneractivity.length;i++){
-        let textareaid = planneractivity[i].time;
-        if( textareaid >currenthour){
-            $(`.${textareaid}-block`).addClass("future");
+    console.log(planneractivity);
+    for(let i=9;i<18;i++){
+        if (planneractivity.length >0){
+            let textareaid = planneractivity[i-9].time;
+            let textareaentry = planneractivity[i-9].dataentry;
+           $(`#input-${textareaid}`).val(textareaentry);
         }
-        else if( textareaid === currenthour){
-            $(`.${textareaid}-block`).addClass("current");
+        if( i < currenthour){
+            $(`.${i}-block`).addClass("bg-warning");
+        }
+        else if( i === currenthour){
+            $(`.${i}-block`).addClass("bg-secondary");
         }
         else{
-            $(`.${textareaid}-block`).addClass("past");
+            $(`.${i}-block`).addClass("bg-primary");
         }
-        let textareaentry = planneractivity[i].dataentry;
-        $(`#${textareaid}`).val(textareaentry);
+       
     }
 }
 
