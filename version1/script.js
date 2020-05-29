@@ -16,6 +16,10 @@ $("#saveplanner").on("click",function(event){
     // console.log(JSON.parse(localStorage.getItem("planneractivity")));
 });
 
+$("#clearplanner").on("click",function(event){
+    localStorage.removeItem("myplanner");
+    $(".planneractivity").val("")
+})
 function getPlannerdata(){
     var currenthour = moment().format("HH");
     console.log(planneractivity);
@@ -32,7 +36,7 @@ function getPlannerdata(){
             $(`.${i}-block`).addClass("bg-secondary");
         }
         else{
-            $(`.${i}-block`).addClass("bg-primary");
+            $(`.${i}-block`).addClass("bg-info");
         }
        
     }
