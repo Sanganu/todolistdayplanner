@@ -18,25 +18,33 @@
         body{
             line-height: 2;
         }
+        header{
+            background-color: tan;
+        }
+        footer{
+            background-color: tan;
+            position: fixed;
+            bottom:0;
+            width: 100%;
+        }
         </style>
 </head>
-
 <body>
     <header>
-        <h6>Day Planner App</h6>
+        <h3>Day Planner App</h3>
     </header>
  
         <table class="container">
             <thead>
-                <tr class="row">
+                <tr class="row" id="9">
                     <th class="col-md-3">TimeBlock</th>
                     <th class="col-md-6">Data</th>
                     <th class="col-md-3">Save</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="row">
-                    <th class="col-md-3">9 am</th>
+                <tr class="row" id="10">
+                    <th class="col-md-3 text-center">9 am</th>
                     <th class="col-md-6">
                         <input class="userinput" type="text" />
                     </th>
@@ -45,8 +53,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">10 am</th>
+                <tr class="row" id="10">
+                    <th class="col-md-3 text-center">10 am</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -55,8 +63,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th  class="col-md-3">11 am</th>
+                <tr class="row" id="11">
+                    <th  class="col-md-3 text-center">11 am</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -65,8 +73,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">12 pm</th>
+                <tr class="row" id="12">
+                    <th class="col-md-3 text-center">12 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -75,8 +83,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">1 pm</th>
+                <tr class="row" id="13">
+                    <th class="col-md-3 text-center">1 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -85,8 +93,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">2 pm</th>
+                <tr class="row" id="14">
+                    <th class="col-md-3 text-center">2 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -95,8 +103,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">3 pm</th>
+                <tr class="row" id="15">
+                    <th class="col-md-3 text-center">3 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -105,8 +113,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">4 pm</th>
+                <tr class="row" id="16">
+                    <th class="col-md-3 text-center">4 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -115,8 +123,8 @@
                         </button>
                     </th>
                 </tr>
-                <tr class="row">
-                    <th class="col-md-3">5 pm</th>
+                <tr class="row" id="17">
+                    <th class="col-md-3 text-center">5 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
                     </th>
@@ -131,6 +139,11 @@
     <footer>
         <p>&copy; Sangeetha K</p>
     </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
