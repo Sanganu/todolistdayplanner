@@ -1,11 +1,11 @@
-var planneractivity = JSON.parse(localStorage.getItem("myplanner"))||[];
+let planneractivity = JSON.parse(localStorage.getItem("myplanner"))||[];
 
 
 $("#saveplanner").on("click",function(event){
     event.preventDefault();
-    var plannerdata=[]
+    let plannerdata=[]
     $(".planneractivity").each(function(){
-        var timeentry ={
+        let timeentry ={
             time:$(this).attr("id").split("-")[1],
             dataentry:$(this).val().trim()
         }
@@ -21,8 +21,8 @@ $("#clearplanner").on("click",function(event){
     $(".planneractivity").val("")
 })
 function getPlannerdata(){
-    var currenthour = moment().format("HH");
-    console.log(planneractivity);
+    let currenthour = moment().hours();
+    console.log(planneractivity,currenthour);
     for(let i=9;i<18;i++){
         if (planneractivity.length >0){
             let textareaid = planneractivity[i-9].time;
@@ -36,7 +36,7 @@ function getPlannerdata(){
             $(`.${i}-block`).addClass("bg-secondary");
         }
         else{
-            $(`.${i}-block`).addClass("bg-info");
+            $(`.${i}-block`).addClass("bg-info");   
         }
        
     }
