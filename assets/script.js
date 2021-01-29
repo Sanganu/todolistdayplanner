@@ -1,7 +1,8 @@
 $(".savePlannerEntry").on("click",function(){
-    var timeblock = $(this).attr("name")
+    let timeblock = $(this).attr("name").split("-")[1]
+    let value = $(`textarea[name=planner-${timeblock}-userentry]`).val()
     console.log("name",timeblock)
-    var time= "timer-"+
+    var time= "time-"+timeblock
     localStorage.setItem(time,value);
 })
 var currenthour = moment().hours()
