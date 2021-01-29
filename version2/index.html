@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Version-2 Day Planner</title>
+    <title>JQuery DOM traversing</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <style>
@@ -28,13 +28,14 @@
         </style>
 </head>
 <body>
-    <header>
+    <header class="d-flex justify-content-between">
         <h3>Day Planner App</h3>
+        <p name="currenttime"></p>
     </header>
  
-        <table class="container">
+        <table class="container  m-5 p-5">
             <thead>
-                <tr class="row" id="columnhead">
+                <tr class="m-3 p-3" id="tablehead">
                     <th class="col-md-2">TimeBlock</th>
                     <th class="col-md-6">Data</th>
                     <th class="col-md-2">Save</th>
@@ -42,7 +43,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="row" id="block-9">
+                <tr class="row  m-3 p-3" id="block-9">
                     <th class="col-md-2 text-center">9 am</th>
                     <th class="col-md-6">
                         <input class="userinput" type="text" />
@@ -55,7 +56,7 @@
                         <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                     </th>
                 </tr>
-                <tr class="row" id="block-10">
+                <tr class="row  m-3 p-3" id="block-10">
                     <th class="col-md-2 text-center">10 am</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -68,7 +69,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-11">
+                <tr class="row  m-3 p-3" id="block-11">
                     <th  class="col-md-2 text-center">11 am</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -81,7 +82,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-12">
+                <tr class="row  m-3 p-3" id="block-12">
                     <th class="col-md-2 text-center">12 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -94,7 +95,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-13">
+                <tr class="row  m-3 p-3" id="block-13">
                     <th class="col-md-2 text-center">1 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -107,7 +108,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-14">
+                <tr class="row  m-3 p-3" id="block-14">
                     <th class="col-md-2 text-center">2 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -120,7 +121,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-15">
+                <tr class="row  m-3 p-3" id="block-15">
                     <th class="col-md-2 text-center">3 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -133,7 +134,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-16">
+                <tr class="row m-3 p-3" id="block-16">
                     <th class="col-md-2 text-center">4 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -146,7 +147,7 @@
                             <button class="deleteentry  bg-danger"><i class="fa fa-eraser"></i></button>
                         </th>
                 </tr>
-                <tr class="row" id="block-17">
+                <tr class="row  m-3 p-3" id="block-17">
                     <th class="col-md-2 text-center">5 pm</th>
                     <th class="col-md-6">
                         <input class="userinput" />
@@ -169,6 +170,7 @@
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./scripts.js"></script>
 </body>
 
